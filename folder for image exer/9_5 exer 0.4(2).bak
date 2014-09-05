@@ -1,0 +1,77 @@
+;; The first three lines of this file were inserted by DrRacket. They record metadata
+;; about the language level of this file in a form that our tools can easily process.
+#reader(lib "htdp-beginner-reader.ss" "lang")((modname |9_5 exer 0.4(2)|) (read-case-sensitive #t) (teachpacks ((lib "image.rkt" "teachpack" "2htdp"))) (htdp-settings #(#t constructor repeating-decimal #f #t none #f ((lib "image.rkt" "teachpack" "2htdp")))))
+(require 2htdp/image)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(define-struct point (x y))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;make-point: Number Number -> point
+;GIVEN: x-coordinate and y-coordinate of a point in a two-dimensional plane
+;RETURNS: the point
+;Examples:
+;(make-point 5 3)
+;(make-point -1 -2)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;point?: Any -> Boolean
+;GIVEN:  an instance of any type
+;RETURNS: if this instance is an instance of point struct
+;Examples:
+;(point? true) => false
+;(point? (make-point 5 3)) => true
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;point-x: point -> Number
+;GIVEN: a point in a two-dimensional plane
+;RETURN: its x-coordinate
+;Examples:
+;(point-x (make-point 1 2)) => 1
+;(point-x (make-point -4 7)) => -4
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;point-y: point -> Number
+;GIVEN: a point in a two-dimensional plane
+;RETURN: its y-coordinate
+;Examples:
+;(point-y (make-point 1 2)) => 2
+;(point-y (make-point -4 7)) => 7
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;ex 12
+;1 (make-point 5 3)
+;2,3 false
+;4 true
+;5 8
+;6 15
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;ex 13
+;(make-point true false)  true
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;ex 14
+;make-student student? student-id student-name student-major
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;ex 15
+(define-struct student (id name major))
+;;A student is a (make-student Number String String -> student).
+;;It represents a student in a college.
+;;Interpretation:
+;;  id = student's college id number.
+;;  name = student's name
+;;  major = student's current major in college
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
